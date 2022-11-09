@@ -27,11 +27,11 @@ optPort <- optimize.portfolio(portfolioReturns, portf, optimize_method = "ROI", 
 
 chart.Weights(optPort)
 
-ef <- extractEfficientFrontier(optPort, match.col = "StdDev", n.portfolios = 25,
+ef <- extractEfficientFrontier(optPort, match.col = "StdDev", n.portfolios = 500,
                                risk_aversion = NULL)
 
 chart.EfficientFrontier(ef,
-                        match.col = "StdDev", n.portfolios = 25, xlim = NULL, ylim = NULL,
+                        match.col = "StdDev", n.portfolios = 500, xlim = NULL, ylim = NULL,
                         cex.axis = 0.8, element.color = "darkgray", main = "Efficient Frontier",
                         RAR.text = "SR", rf = 0, tangent.line = TRUE, cex.legend = 0.8,
                         chart.assets = TRUE, labels.assets = TRUE, pch.assets = 21,
