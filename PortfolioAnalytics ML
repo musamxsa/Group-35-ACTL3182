@@ -19,7 +19,7 @@ portfolioReturns <- na.omit(ROC(portfolioPrices))
 portf <- portfolio.spec(colnames(portfolioReturns))
 
 portf <- add.constraint(portf, type="weight_sum", min_sum=1, max_sum=1)
-portf <- add.constraint(portf, type="box", min=.01, max=.70)
+portf <- add.constraint(portf, type="box", min=.001, max=.99)
 portf <- add.objective(portf, type="return", name="mean")
 portf <- add.objective(portf, type="risk", name="StdDev")
 
